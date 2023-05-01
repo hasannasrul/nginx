@@ -28,9 +28,12 @@ Config Files are available at locations
 
 nginx.conf file is the main configuration file for Nginx and is located in the top-level directory of Nginx configuration, which is typically /etc/nginx/. This file contains the global settings for the Nginx server, such as the user and worker processes, server blocks, and other directives that control how Nginx functions
 
-*Other import folders present in ```/etc/nginx`` are*
+*Other important folders present in ```/etc/nginx``` are*
+
     1. sites-available
+    
     2. sites-enabled
+    
     3. conf.d
 
 *1. sites-available*
@@ -47,6 +50,7 @@ We only placed those files in this directory which are required to serve to the 
 is included in nginx.conf file. which tells nginx to use configuration files from here.
 
 *3. conf.d*
+
 Same function as sites-enabled. One directory can be excluded in nginx.conf (check include directive with path to these folders and remove one of them)
 
 #### Misc. 
@@ -57,14 +61,16 @@ One other Important folder is present at
 
 From this folder we can serve static files to the client.
 
-#### logs
+#### Server Logs
 
 By default logs are setup at this location
 
 ```/var/log/nginx/```
 
-name of the logs file are
+Name of the logs file are
+
 1. access.log
+
 2. error.log
 
 We can configure log files location and name in nginx.conf or our separate config files in (conf.d, sites-available)
